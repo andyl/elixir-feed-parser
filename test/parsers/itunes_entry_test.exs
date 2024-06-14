@@ -36,7 +36,7 @@ defmodule ElixirFeedParser.Test.ITunesRSS2EntryTest do
   end
 
   test "parse the published date", %{example1: entry} do
-    assert entry.updated == %DateTime{day: 15, hour: 19, minute: 0, month: 6, second: 0, microsecond: {0,0}, year: 2005, time_zone: "GMT", zone_abbr: "GMT", utc_offset: 0, std_offset: 0}
+    assert entry.updated == ~U[2005-06-15 19:00:00Z]
   end
 
   test "parse the duration", %{example1: entry} do
